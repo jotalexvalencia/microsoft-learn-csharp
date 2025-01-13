@@ -1,0 +1,14 @@
+D:\02-tic\repos\CsharpProjects\TestProject\bin\Debug\net8.0\TestProject.exe
+D:\02-tic\repos\CsharpProjects\TestProject\bin\Debug\net8.0\TestProject.deps.json
+D:\02-tic\repos\CsharpProjects\TestProject\bin\Debug\net8.0\TestProject.runtimeconfig.json
+D:\02-tic\repos\CsharpProjects\TestProject\bin\Debug\net8.0\TestProject.dll
+D:\02-tic\repos\CsharpProjects\TestProject\bin\Debug\net8.0\TestProject.pdb
+D:\02-tic\repos\CsharpProjects\TestProject\obj\Debug\net8.0\TestProject.GeneratedMSBuildEditorConfig.editorconfig
+D:\02-tic\repos\CsharpProjects\TestProject\obj\Debug\net8.0\TestProject.AssemblyInfoInputs.cache
+D:\02-tic\repos\CsharpProjects\TestProject\obj\Debug\net8.0\TestProject.AssemblyInfo.cs
+D:\02-tic\repos\CsharpProjects\TestProject\obj\Debug\net8.0\TestProject.csproj.CoreCompileInputs.cache
+D:\02-tic\repos\CsharpProjects\TestProject\obj\Debug\net8.0\TestProject.dll
+D:\02-tic\repos\CsharpProjects\TestProject\obj\Debug\net8.0\refint\TestProject.dll
+D:\02-tic\repos\CsharpProjects\TestProject\obj\Debug\net8.0\TestProject.pdb
+D:\02-tic\repos\CsharpProjects\TestProject\obj\Debug\net8.0\TestProject.genruntimeconfig.cache
+D:\02-tic\repos\CsharpProjects\TestProject\obj\Debug\net8.0\ref\TestProject.dll
