@@ -1,14 +1,18 @@
-﻿using System.Globalization; 
+﻿using System.Globalization;
 CultureInfo.CurrentCulture = new CultureInfo("en-US");
-string value = "bad";
-int result = 0;
-if (int.TryParse(value, out result))
+string[] values = { "12.3", "45", "ABC", "11", "DEF" };
+float result = default(float);
+string Message = "";
+foreach (string value in values)
 {
-   Console.WriteLine($"Measurement: {result}");
+   if (float.TryParse(value, out float number))
+   {
+      result += number;
+   }
+   else
+   {
+      Message += value;
+   }
 }
-else
-{
-   Console.WriteLine("Unable to report the measurement.");
-}
-if (result > 0)
-   Console.WriteLine($"Measurement (w/ offset): {50 + result}");
+Console.WriteLine($"Message: {Message.Trim()}");
+Console.WriteLine($"Total: {result}");
