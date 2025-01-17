@@ -1,31 +1,25 @@
 ﻿using System.Globalization;
 CultureInfo.CurrentCulture = new CultureInfo("en-US");
 
-string pangram = "The quick brown fox jumps over the lazy dog";
+string orderStream = "B123,C234,A345,C15,B177,G3003,C235,B179";
 
-// 1. Dividir en palabras
-string[] words = pangram.Split(' ');
+// Split the order stream into individual orders
+string[] orders = orderStream.Split(',');
 
+// sort the orders  by order number
+Array.Sort(orders);
 
-// 2. Crear array para palabras invertidas
-string[] reversedWords = new string[words.Length];
-
-
-// 3. Invertir cada palabra
-foreach (string word in words)
+// Print the sorted order stream
+foreach (string order in orders)
 {
-  char[] letters = word.ToCharArray();
-  Array.Reverse(letters);
-  string reversedWord = new string(letters);
-  reversedWords[Array.IndexOf(words, word)] = reversedWord;
+  if (order.Length != 4)
+  {
+    Console.WriteLine($"{order}\t -Error");
+  }
+  else
+  {
+    Console.WriteLine(order);
+  }
 }
-
-
-// 4. Unir palabras invertidas con espacios
-
-string result = string.Join(" ", reversedWords);
-Console.WriteLine(result);
-
-
 
 
