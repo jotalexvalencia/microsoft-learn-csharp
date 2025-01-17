@@ -1,25 +1,19 @@
 ﻿using System.Globalization;
 CultureInfo.CurrentCulture = new CultureInfo("en-US");
 
-string orderStream = "B123,C234,A345,C15,B177,G3003,C235,B179";
+Console.WriteLine("Generating random numbers:");
+DisplayRandomNumbers();
 
-// Split the order stream into individual orders
-string[] orders = orderStream.Split(',');
-
-// sort the orders  by order number
-Array.Sort(orders);
-
-// Print the sorted order stream
-foreach (string order in orders)
+void DisplayRandomNumbers()
 {
-  if (order.Length != 4)
+  Random random = new Random();
+
+  for (int i = 0; i < 5; i++)
   {
-    Console.WriteLine($"{order}\t -Error");
+    Console.Write($"{random.Next(1, 100)} ");
   }
-  else
-  {
-    Console.WriteLine(order);
-  }
+
+  Console.WriteLine();
 }
 
 
