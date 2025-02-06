@@ -1,63 +1,27 @@
-﻿
-using System.CodeDom.Compiler;
-using System.Collections.Generic;
-using System.Collections;
-using System.ComponentModel;
-using System.Diagnostics.CodeAnalysis;
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.Serialization;
-using System.Text.RegularExpressions;
-using System.Text;
-using System;
+﻿int[] schedule = { 800, 1200, 1600, 2000 };
 
-
-
-class Result
+void DisplayAdjustedTimes(int[] times, int currentGMT, int newGMT)
 {
-
-  /*
-   * Complete the 'fizzBuzz' function below.
-   *
-   * The function accepts INTEGER n as parameter.
-   */
-
-  public static void fizzBuzz(int n)
+  int diff = 0;
+  if (Math.Abs(newGMT) > 12 || Math.Abs(currentGMT) > 12)
   {
-    for (int i = 1; i <= n; i++)
-    {
-      if (i % 3 == 0 && i % 5 != 0)
-      {
-        Console.WriteLine("Fizz");
-      }
-      else if (i % 5 == 0 && i % 3 != 0)
-      {
-        Console.WriteLine("Buzz");
-      }
-      else if (i % 3 == 0 && i % 5 == 0)
-      {
-        Console.WriteLine("FizzBuzz");
+    Console.WriteLine("Invalid GMT");
+  }
+  else if (newGMT <= 0 && currentGMT <= 0 || newGMT >= 0 && currentGMT >= 0)
+  {
+    diff = 100 * (Math.Abs(newGMT) - Math.Abs(currentGMT));
+  }
+  else
+  {
+    diff = 100 * (Math.Abs(newGMT) + Math.Abs(currentGMT));
+  }
 
-      }
-      else
-      {
-        Console.WriteLine(i);
-      }
-
-    }
-
+  for (int i = 0; i < times.Length; i++)
+  {
+    int newTime = ((times[i] + diff)) % 2400;
+    Console.WriteLine($"{times[i]} -> {newTime}");
   }
 
 }
 
-class Solution
-{
-  public static void Main(string[] args)
-  {
-    int n = 15;
-
-    Result.fizzBuzz(n);
-  }
-}
+DisplayAdjustedTimes(schedule, 6, -6);
