@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\02-tic\\repos\\CsharpProjects\\TestProject\\TestProject.csproj": {}
+    "d:\\02-tic\\repos\\CsharpProjects\\TestProject\\TestProject.csproj": {}
   },
   "projects": {
-    "D:\\02-tic\\repos\\CsharpProjects\\TestProject\\TestProject.csproj": {
+    "d:\\02-tic\\repos\\CsharpProjects\\TestProject\\TestProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\02-tic\\repos\\CsharpProjects\\TestProject\\TestProject.csproj",
+        "projectUniqueName": "d:\\02-tic\\repos\\CsharpProjects\\TestProject\\TestProject.csproj",
         "projectName": "TestProject",
-        "projectPath": "D:\\02-tic\\repos\\CsharpProjects\\TestProject\\TestProject.csproj",
+        "projectPath": "d:\\02-tic\\repos\\CsharpProjects\\TestProject\\TestProject.csproj",
         "packagesPath": "C:\\Users\\Alex Valencia\\.nuget\\packages\\",
-        "outputPath": "D:\\02-tic\\repos\\CsharpProjects\\TestProject\\obj\\",
+        "outputPath": "d:\\02-tic\\repos\\CsharpProjects\\TestProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
