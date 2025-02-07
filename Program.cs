@@ -1,13 +1,12 @@
-﻿string[] students = { "Jenna", "Ayesha", "Carlos", "Viktor" };
+﻿int a = 3;
+int b = 4;
+int c = 0;
 
-DisplayStudents(students);
-DisplayStudents(new string[] { "Robert", "Vanya" });
+Multiply(a, b, c);
+Console.WriteLine($"global statement: {a} x {b} = {c}");
 
-void DisplayStudents(string[] students)
+void Multiply(int a, int b, int c)
 {
-  foreach (string student in students)
-  {
-    Console.Write($"{student}, ");
-  }
-  Console.WriteLine();
+  c = a * b;
+  Console.WriteLine($"inside Multiply method: {a} x {b} = {c}");
 }
