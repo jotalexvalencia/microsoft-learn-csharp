@@ -1,35 +1,29 @@
-﻿string[,] corporate =
+﻿double total = 0;
+double minimumSpend = 30.00;
+
+double[] items = { 15.97, 3.50, 12.25, 22.99, 10.98 };
+double[] discounts = { 0.30, 0.00, 0.10, 0.20, 0.50 };
+
+for (int i = 0; i < items.Length; i++)
 {
-    {"Robert", "Bavin"}, {"Simon", "Bright"},
-    {"Kim", "Sinclair"}, {"Aashrita", "Kamath"},
-    {"Sarah", "Delucchi"}, {"Sinan", "Ali"}
-};
-
-string[,] external =
-{
-    {"Vinnie", "Ashton"}, {"Cody", "Dysart"},
-    {"Shay", "Lawrence"}, {"Daren", "Valdes"}
-};
-
-string externalDomain = "hayworth.com";
-
-for (int i = 0; i < corporate.GetLength(0); i++)
-{
-  // display internal email addresses
-  Console.WriteLine(GenerateEmail(corporate[i, 0], corporate[i, 1]));
-
+  total += GetDiscountedPrice(i);
 }
 
-for (int i = 0; i < external.GetLength(0); i++)
+total -= TotalMeetsMinimum() ? 5.00 : 0.00;
+
+Console.WriteLine($"Total: ${FormatDecimal(total)}");
+
+double GetDiscountedPrice(int itemIndex)
 {
-  // display external email addresses
-  Console.WriteLine(GenerateEmail(external[i, 0], external[i, 1], externalDomain));
+  return items[itemIndex] * (1 - discounts[itemIndex]);
 }
 
-// Función para generar correos electrónicos
-string GenerateEmail(string firstName, string lastName, string domain = "contoso.com")
+bool TotalMeetsMinimum()
 {
-  // Tomar las dos primeras letras del nombre y el apellido completo
-  string emailPrefix = $"{firstName.ToLower().Substring(0, 2)}{lastName.ToLower()}";
-  return $"{emailPrefix}@{domain}";
+  return total >= minimumSpend;
+}
+
+string FormatDecimal(double input)
+{
+  return input.ToString().Substring(0, 5);
 }
