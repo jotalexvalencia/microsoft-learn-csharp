@@ -1,17 +1,14 @@
-﻿double usd = 23.73;
-int vnd = UsdToVnd(usd);
-
-Console.WriteLine($"${usd} USD = ${vnd} VND");
-Console.WriteLine($"${vnd} VND = ${VndToUsd(vnd)} USD");
-
-int UsdToVnd(double usd)
+﻿string ReverseWord(string word)
 {
-  int rate = 23500;
-  return (int)(rate * usd);
+  string result = "";
+  for (int i = word.Length - 1; i >= 0; i--)
+  {
+    result += word[i];
+  }
+  return result;
 }
 
-double VndToUsd(int vnd)
-{
-  double rate = 23500;
-  return vnd / rate;
-}
+string input = "snake";
+
+Console.WriteLine(input);
+Console.WriteLine(ReverseWord(input));
