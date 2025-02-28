@@ -4,39 +4,20 @@ class Program
 {
   static void Main()
   {
-    Console.WriteLine("Enter a number to find its prime factors:");
-    string? input = Console.ReadLine();
-    if (string.IsNullOrEmpty(input))
-    {
-      System.Console.WriteLine("Input cannot be null or empty.");
-      return;
-    }
-    int n = int.Parse(input);
+    Console.WriteLine("Enter the number for Fibonnaci series: ");
+    int n = Convert.ToInt32(System.Console.ReadLine());
 
-    if (n < 2)
-    {
-      System.Console.WriteLine(n);
-      return;
-    }
+    int a = 0, b = 1;
+    //? Printing the first two numbers of the series
+    // System.Console.WriteLine(a);
+    // System.Console.WriteLine(b);
 
-    while (n % 2 == 0)
+    for (int i = 1; i <= n; i++)
     {
-      System.Console.WriteLine(2);
-      n /= 2;
-    }
-
-    for (int i = 3; i * i <= n; i += 2)
-    {
-      while (n % i == 0)
-      {
-        System.Console.WriteLine(i);
-        n /= i;
-      }
-    }
-
-    if (n > 2)
-    {
-      System.Console.WriteLine(n);
+      int c = a + b;
+      a = b;
+      b = c;
+      System.Console.WriteLine(c);
     }
   }
 }
